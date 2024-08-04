@@ -3,12 +3,12 @@ import EmptyOrder from "./components/empty-order"
 function App() {
 
   return (
-    <>
-     <h1 className="text-3xl font-bold text-red-600 underline">
-       Hello world!
-     </h1>
-     <EmptyOrder />
-    </>
+    <div className="mt-20 ml-32">
+      <div className="mb-5">
+        <h1 className="text-4xl font-bold">Desserts</h1>
+      </div>
+      <EmptyOrder />
+    </div>
   )
 }
 

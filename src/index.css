@@ -2,3 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    background-color: hsl(13, 31%, 94%);
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Red Hat Text'), url(./fonts/RedHatText-Regular.ttf) format('truetype');
+}
+  /* Repeat for other font weights (e.g., bold, italic, etc.) */
+  
