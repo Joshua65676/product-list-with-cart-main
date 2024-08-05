@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="mt-20 ml-32">
       <div className="mb-5">
-        <h1 className="text-4xl font-bold">Desserts</h1>
+        <h1 className="text-4xl font-bold text-Rose-900">Desserts</h1>
       </div>
       <EmptyOrder />
     </div>

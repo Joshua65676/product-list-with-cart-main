@@ -1,12 +1,20 @@
+import { useState } from "react";
 import { itemsData } from "../constants/index.js";
+import DecreIncrement from "./decre&incre.js";
+import SelectedOrder from "./selected-order.js";
 import YourCart from "./yourCart-order.js";
 
 const EmptyOrder = () => {
+    const [showAdd, setShowAdd] = useState(true);
+    const [isSelected, setIsSelected] = useState(false);
+
+    // function () {
+    //     // setSelectedItemId(itemsData);
+    //     setShowAdd(false);
+    // }
+    
   return (
     <>
-      {/* <div className="">
-        <h1 className="">Desserts</h1>
-      </div> */}
 
       <div className="flex space-x-20">
       
@@ -19,25 +27,40 @@ const EmptyOrder = () => {
                 <img src={image} alt="image" className="rounded-xl w-72" />
               </div>
 
-              <button className="flex">
-                <div className="flex items-center w-40 mb-5 ml-16 -mt-5 bg-white border-4 rounded-full">
+              <>
+                    
+               <button onClick={() => setIsSelected(!isSelected, setShowAdd(false))} className="flex">
+                <div className={`Add ${showAdd ? '' : 'hidden'}`}>
+                    
+                 <div className="flex items-center w-40 h-12 mb-5 ml-16 -mt-6 bg-white border-2 rounded-full border-Rose-300">
                   <div className="flex ml-5 space-x-3">
                     <img src={icon} alt="image" className="" />
-                    <div className="">{add}</div>
+                    <div className="font-semibold text-Rose-900">{add}</div>
                   </div>
+                 </div>
                 </div>
-              </button>
+               </button>
 
-              <div className="">
-                <div className="">{name}</div>
-                <div className="">{description}</div>
-                <div className="">{price}</div>
+               <div className={`Increment ${showAdd ? 'hidden' : 'flex'}`}>
+                <DecreIncrement />
+               </div>
+               </>
+              
+              <div className="font-bold ">
+                <div className="text-sm text-Rose-500">{name}</div>
+                <div className="text-Rose-900">{description}</div>
+                <div className="text-Reds">{price}</div>
               </div>
             </div>
         ))}
       </div>
-      <div className="-mt-10">
-        <YourCart />
+      <div className="-mt-10 space-y-9">
+        <div className={`Add ${showAdd ? '' : 'hidden'}`}>
+          <YourCart />
+        </div>
+        <div className={`Increment ${showAdd ? 'hidden' : 'flex'}`}>
+           <SelectedOrder />
+        </div>
       </div>
       
       </div>
