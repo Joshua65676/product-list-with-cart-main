@@ -18,7 +18,7 @@ const DecreIncrement = () => {
             <button className="w-5 h-5 ml-1 border-2 rounded-full border-red-50" onClick={decrement}>
               <img src="/src/assets/images/icon-decrement-quantity.svg" alt="image" className="ml-[3.5px]" />
             </button>
-            <div className="-mt-0.5 font-semibold text-white">{count}</div>
+            <div className="-mt-0.5 font-semibold text-white">{ count }</div>
             <button className="w-5 h-5 ml-1 border-2 rounded-full border-red-50" onClick={increment}>
               <img src="/src/assets/images/icon-increment-quantity.svg" alt="image" className="ml-[3.5px]" />
             </button>

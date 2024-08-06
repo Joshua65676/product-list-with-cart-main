@@ -5,13 +5,9 @@ import SelectedOrder from "./selected-order.js";
 import YourCart from "./yourCart-order.js";
 
 const EmptyOrder = () => {
+    
     const [showAdd, setShowAdd] = useState(true);
     const [isSelected, setIsSelected] = useState(false);
-
-    // function () {
-    //     // setSelectedItemId(itemsData);
-    //     setShowAdd(false);
-    // }
     
   return (
     <>
@@ -21,7 +17,7 @@ const EmptyOrder = () => {
       <div className="grid grid-cols-3 gap-10">
         {itemsData.map(({ id, image, icon, add, name, description, price}:
          {id: number; image: string; icon: string; add: string; name: string; description: string; price: string }) => (
-            <div key={id} className="">
+            <div key={id}  className="">
 
               <div className="">
                 <img src={image} alt="image" className="rounded-xl w-72" />

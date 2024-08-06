@@ -4,7 +4,7 @@ const SelectedOrder = () => {
     <div className="h-64 -mt-8 -ml-5 bg-white w-80 rounded-2xl">
       <div className="pt-5">
         <h3 className="ml-5 text-base font-bold text-Reds">
-          Your Cart <span className="">(0)</span>
+          Your Cart <span className="">(1)</span>
         </h3>
       </div>
       
